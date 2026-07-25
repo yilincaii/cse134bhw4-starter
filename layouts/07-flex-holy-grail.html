@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>07 · Flex holy grail</title>
+  <link rel="stylesheet" href="vars.css">
+  <link rel="stylesheet" href="global.css">
+  <!--
+    FLEX HOLY GRAIL
+    Header, three-column middle, footer. Flexbox is one-dimensional, so it
+    takes two nested containers: the body is a flex COLUMN (as in demo 06),
+    and main is a flex ROW holding nav, article, and aside. The side
+    columns have fixed flex-basis; the article takes the rest with flex: 1.
+    Demo 09 builds the same layout with one grid container.
+  -->
+  <style>
+    body {
+      --nav-width: 10rem;
+      --aside-width: 12rem;
+
+      display: flex;
+      flex-direction: column;
+      min-height: 100svh;
+
+      > header {
+        padding: var(--space-2) var(--space-3);
+        border-block-end: var(--border);
+        background: var(--panel);
+      }
+
+      > main {
+        flex: 1;
+        display: flex;
+
+        > nav {
+          flex: 0 0 var(--nav-width);
+          padding: var(--space-2);
+          border-inline-end: var(--border);
+          background: var(--panel);
+
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+        }
+
+        > article {
+          flex: 1;
+          padding: var(--space-3);
+        }
+
+        > aside {
+          flex: 0 0 var(--aside-width);
+          padding: var(--space-2);
+          border-inline-start: var(--border);
+          background: var(--panel);
+        }
+      }
+
+      > footer {
+        padding: var(--space-2) var(--space-3);
+        border-block-start: var(--border);
+        background: var(--panel);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>07 · Flex holy grail</h1>
+  </header>
+
+  <main>
+    <nav>
+      <p>Nav — fixed at 10rem via <code>flex-basis</code>.</p>
+      <ul>
+        <li><a href="#">Link one</a></li>
+        <li><a href="#">Link two</a></li>
+        <li><a href="#">Link three</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2>Article</h2>
+      <p>The center column has <code>flex: 1</code>, so it takes all the width the fixed side columns leave over.</p>
+      <p>Two nested flex containers do the job: a column for the page, a row for this middle band.</p>
+    </article>
+
+    <aside>
+      <p>Aside — fixed at 12rem, full height of the row thanks to default <code>align-items: stretch</code>.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Footer — bottom of the page, courtesy of the growing main row.</p>
+  </footer>
+</body>
+</html>

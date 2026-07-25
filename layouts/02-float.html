@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02 · Float</title>
+  <link rel="stylesheet" href="vars.css">
+  <link rel="stylesheet" href="global.css">
+  <!--
+    FLOAT
+    float: left shifts the figure to one side and takes it out of normal
+    flow; the line boxes of following text shorten to wrap around it.
+    The figure is deliberately taller than all the text, so the footer's
+    clear: both is visible: without it, the footer would slide up and sit
+    beside the float; with it, the footer starts below the figure's bottom.
+  -->
+  <style>
+    body {
+      --figure-width: 11rem;
+      --figure-height: 24rem;
+
+      max-width: var(--measure);
+      margin-inline: auto;
+      padding: var(--space-3);
+
+      article {
+        figure {
+          float: left;
+          width: var(--figure-width);
+          min-height: var(--figure-height);
+          margin: 0 var(--space-2) var(--space-1) 0;
+          padding: var(--space-2);
+          border: var(--border);
+          background: var(--panel);
+        }
+      }
+
+      > footer {
+        clear: both;
+        padding: var(--space-2);
+        border-block-start: var(--rule);
+        background: var(--panel);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>02 · Float</h1>
+  <p>The gray figure floats left and the paragraphs wrap around it.</p>
+
+  <article>
+    <figure>
+      <figcaption>This figure has <code>float: left</code> and a fixed width.</figcaption>
+    </figure>
+    <p>Before flexbox and grid, floats were how the web did columns. A floated box is shifted to one side and removed from normal flow; the text that follows shortens its lines to run alongside it.</p>
+    <p>Keep reading and the lines keep wrapping. This figure is taller than all three paragraphs, so every line stays narrow — text only returns to full width once it passes the bottom of a float.</p>
+    <p>Floats were designed for exactly this — images in running text — which is why using them for whole page layouts always felt like a workaround.</p>
+  </article>
+
+  <footer>
+    <p>Footer — <code>clear: both</code> makes this start below the float. Delete that one line and this footer slides up beside the figure.</p>
+  </footer>
+</body>
+</html>

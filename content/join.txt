@@ -1,0 +1,28 @@
+Join the Society — page copy for join.html.
+
+Join The CSE Cheese Society
+
+Membership is free, meetings are monthly, and the cheese is real.
+Fill out the form and the Keeper of the Cave will be in touch.
+
+Form fields:
+- Name (text, required)
+- Email (email, required)
+- Which family calls to you? (select: Fresh, Soft-ripened, Blue,
+  Hard, Undecided — that's why I'm here)
+- Which of these have you tasted? (checkboxes: Brie, Roquefort,
+  Aged Gouda — yes, the same three from the Guide)
+- Tell us your favorite cheese (text, placeholder "e.g. Comte")
+- Submit button: "Sign me up"
+
+"Why join?" dialog copy (opens from a button near the form):
+
+Why join?
+
+- Monthly tastings. The Society buys the cheese. You bring opinions.
+- Voting rights in the Cheese of the Month election.
+- Access to THE CAVE (a mini-fridge, but a very serious one).
+- A laminated membership card featuring the cheese of your choice.
+- Amnesty program for recovering blue-cheese skeptics.
+
+Close button: "I'm convinced"

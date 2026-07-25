@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS layout demos</title>
+  <link rel="stylesheet" href="vars.css">
+  <link rel="stylesheet" href="global.css">
+  <!--
+    INDEX
+    Nine standalone demos, one layout technique each, in teaching order:
+    flow → float → positioning → flexbox → grid. Each file carries its
+    own explanation as a comment in the <head>; the shared vars.css and
+    global.css hold only tokens, reset, type, and color — never layout.
+  -->
+  <style>
+    body {
+      max-width: var(--measure);
+      margin-inline: auto;
+      padding: var(--space-4) var(--space-3);
+    }
+
+    h1 {
+      padding-block-end: var(--space-1);
+      border-block-end: var(--rule);
+    }
+
+    ol {
+      margin: 0;
+      padding-inline-start: var(--space-3);
+      list-style: decimal-leading-zero;
+
+      li {
+        border-block-end: var(--border);
+
+        &::marker {
+          color: var(--accent);
+          font-weight: 700;
+        }
+
+        a {
+          display: block;
+          padding-block: var(--space-2);
+          text-decoration: none;
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS layout demos</h1>
+  <p>Basic layout syntax, one technique per file, in teaching order. View source on any demo — the explanation is a comment in the <code>&lt;head&gt;</code>.</p>
+
+  <ol>
+    <li><a href="01-flow.html">Normal flow — block, inline, and a centered column</a></li>
+    <li><a href="02-float.html">Float — text wrapping a figure, and clear</a></li>
+    <li><a href="03-relative-position.html">Relative position — nudged, space preserved</a></li>
+    <li><a href="04-absolute-position.html">Absolute position — pinned inside a relative box</a></li>
+    <li><a href="05-flex-centering.html">Flexbox — perfect centering</a></li>
+    <li><a href="06-flex-page.html">Flexbox — header / main / footer page</a></li>
+    <li><a href="07-flex-holy-grail.html">Flexbox — holy grail</a></li>
+    <li><a href="08-grid-page.html">Grid — header / main / footer with named areas</a></li>
+    <li><a href="09-grid-holy-grail.html">Grid — holy grail, remapped by one media query</a></li>
+  </ol>
+</body>
+</html>

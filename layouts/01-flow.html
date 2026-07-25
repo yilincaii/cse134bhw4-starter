@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>01 · Normal flow</title>
+  <link rel="stylesheet" href="vars.css">
+  <link rel="stylesheet" href="global.css">
+  <!--
+    NORMAL FLOW
+    With no layout CSS at all, block boxes (h1, p, section…) stack top to
+    bottom and fill the available width, while inline boxes (strong, em, a…)
+    run left to right inside lines of text.
+    The only real layout rules here build the classic centered reading
+    column: max-width plus margin-inline: auto on the article.
+  -->
+  <style>
+    body {
+      padding: var(--space-3);
+    }
+
+    section {
+      p {
+        padding: var(--space-2);
+        border: var(--border);
+        background: var(--panel);
+      }
+
+      strong,
+      em {
+        background: var(--paper);
+        outline: var(--border-width) var(--border-style) var(--accent);
+      }
+    }
+
+    article {
+      max-width: var(--measure);
+      margin-inline: auto;
+      padding: var(--space-2) var(--space-3);
+      border-inline-start: var(--rule);
+      background: var(--panel);
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>01 · Normal flow</h1>
+  <p>Nothing on this page floats, flexes, or sits on a grid — this is plain document flow.</p>
+
+
+  <section>
+    <h2>Block boxes stack</h2>
+    <p>This paragraph is a block box. It fills the page width and stacks below the heading above it.</p>
+    <p>This second paragraph stacks below the first. Inside it, <strong>this strong text</strong> and <em>this em text</em> are inline boxes — outlined in red, each only as wide as its own content, flowing along the line.</p>
+  </section>
+
+
+
+  <article>
+    <h2>A centered reading column</h2>
+    <p>This article is still in normal flow. Giving it <code>max-width</code> and <code>margin-inline: auto</code> centers the whole column — the classic way to center a region before any layout system is involved.</p>
+  </article>
+</body>
+</html>

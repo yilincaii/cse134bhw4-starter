@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>08 · Grid page scaffold</title>
+  <link rel="stylesheet" href="vars.css">
+  <link rel="stylesheet" href="global.css">
+  <!--
+    GRID PAGE SCAFFOLD
+    The same header/main/footer page as demo 06, built with grid instead.
+    grid-template-areas names the rows so the CSS reads like a sketch of
+    the page; each region claims its slot with grid-area. Rows are
+    auto 1fr auto: natural height at the edges, main takes the rest.
+  -->
+  <style>
+    body {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+      grid-template-rows: auto 1fr auto;
+      min-height: 100svh;
+
+      > header {
+        grid-area: header;
+        padding: var(--space-2) var(--space-3);
+        border-block-end: var(--border);
+        background: var(--panel);
+      }
+
+      > main {
+        grid-area: main;
+        padding: var(--space-3);
+      }
+
+      > footer {
+        grid-area: footer;
+        padding: var(--space-2) var(--space-3);
+        border-block-start: var(--border);
+        background: var(--panel);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>08 · Grid page scaffold</h1>
+  </header>
+
+  <main>
+    <p>Main — this region is placed with <code>grid-area: main</code> into the <code>1fr</code> row, so it takes all the height the header and footer leave over.</p>
+    <p>Compare the CSS with demo 06: no growing children, just three named rows.</p>
+  </main>
+
+  <footer>
+    <p>Footer — sits in the last named row, pinned to the bottom by the 1fr row above it.</p>
+  </footer>
+</body>
+</html>
