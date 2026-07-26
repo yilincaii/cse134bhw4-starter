@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+body > main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-3);
+}
+.not-found-card {
+  --card-width: 24rem;
+  max-width: var(--card-width);
+  padding: var(--space-3);
+  border: var(--border);
+  border-block-start: var(--rule);
+  background: var(--panel);
+  text-align: center;
+}
+.not-found-card img {
+  width: 6rem;
+  height: 6rem;
+  margin-inline: auto;
+}
