@@ -1,0 +1,43 @@
+main {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: var(--space-3);
+}
+article {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+figure {
+  float: left;
+  width: 16rem;
+  margin: 0 var(--space-2) var(--space-1) 0;
+  padding: var(--space-2);
+  border: var(--border);
+  background: var(--panel);
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: var(--space-1);
+}
+details {
+  border: var(--border);
+  background: var(--panel);
+  padding: var(--space-2);
+  margin-block-end: var(--space-2);
+}
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+details p {
+  margin-block-start: var(--space-2);
+}
