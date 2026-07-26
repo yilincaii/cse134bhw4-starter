@@ -1,0 +1,64 @@
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100svh;
+}
+body > header {
+  grid-area: header;
+}
+
+body > nav {
+  grid-area: nav;
+  border-block-end: var(--border);
+  background: var(--panel);
+}
+body > main {
+  grid-area: main;
+  padding: var(--space-3);
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+body > footer {
+  grid-area: footer;
+}
+
+
+.hero {
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  margin-block-end: var(--space-2);
+}
+main dl {
+  margin: var(--space-2) 0;
+}
+main dt {
+  color: var(--accent);
+  font-weight: bold;
+  margin-top:var(--space-2);
+}
+
+main dt + dd {
+  border-left: var(--rule);
+  margin: 0.125rem 0 0 var(--space-2);
+  padding-left:var(--space-1);
+}
+.family-pagination {
+  display: block;
+  margin-block-start: var(--space-3);
+  padding-block-start: var(--space-2);
+  border-block-start:var(--border);
+}
+.family-pagination a {
+  margin-inline-end: var(--space-2);
+}
+.thumb-fresh, .hero.thumb-fresh { view-transition-name: cheese-fresh; }
+.thumb-soft,  .hero.thumb-soft  { view-transition-name: cheese-soft; }
+.thumb-blue,  .hero.thumb-blue  { view-transition-name: cheese-blue; }
+.thumb-hard,  .hero.thumb-hard  { view-transition-name: cheese-hard; }
