@@ -1,0 +1,43 @@
+/*  Page-level placement of these regions (e.g. grid areas,
+   flex columns) lives in each page's own layout file, not here. */
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+body > header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding:var(--space-2);
+  border-bottom: var(--rule);
+}
+
+body > header .logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+body > header h1 {
+  margin: 0;
+}
+body > nav {
+  display:flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+}
+
+body > nav a {
+  text-decoration: none;
+}
+body > nav a:hover {
+  text-decoration:underline;
+}
+body > footer {
+  text-align: center;
+  font-size:var(--text-s);
+  padding: var(--space-2);
+  border-top: var(--border);
+}
