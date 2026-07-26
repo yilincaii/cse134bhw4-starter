@@ -1,0 +1,32 @@
+/* Design tokens only — no layout, no selectors beyond :root. */
+:root {
+  /* color — from HW3 cheese guide */
+  --ink: #3f2b1d;      
+  --paper: #f7f3e8;    
+  --accent: #a06012;   
+  --panel: #eec4d3; /* new*/
+
+  /* type */
+  --font-stack: Georgia, "Times New Roman", serif; 
+  --text-s: 0.875rem;
+  --text-m: 1rem;
+  --text-l: 1.5rem;
+  --text-xl: 2.25rem;
+
+  /* space — same as starter vars.css */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+
+  /* border —sam as starter vars.css */
+  --border-style: solid;
+  --border-width: 1px;
+  --rule-width: 4px;
+  --underline-width: 2px;
+  --border: var(--border-width) var(--border-style) var(--ink);
+  --rule: var(--rule-width) var(--border-style) var(--accent);
+
+  /* line length */
+  --measure: 62ch;
+}
