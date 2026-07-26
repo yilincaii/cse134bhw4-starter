@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+body > main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-3);
+}
+
+.join-card {
+  --card-width: 28rem;
+  max-width: var(--card-width);
+  padding: var(--space-3);
+  border: var(--border);
+  border-block-start: var(--rule);
+  background: var(--panel);
+}
+.join-card form > p,
+.join-card fieldset {
+  margin-block: var(--space-2);
+}
+
+.join-card label {
+  display: block;
+  margin-block-end: 0.25rem;
+}
+.join-card input[type="text"],
+.join-card input[type="email"],
+.join-card select {
+  background: var(--paper);
+  padding: 0.25em;
+  width: 100%;
+}
+
+dialog {
+  max-width: var(--card-width);
+  padding: var(--space-3);
+  border: var(--border);
+  background: var(--panel);
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+dialog ul {
+  padding-inline-start: var(--space-3);
+}
+dialog li {
+  margin-block-end: var(--space-1);
+}
