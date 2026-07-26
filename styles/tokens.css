@@ -1,4 +1,3 @@
-/* Design tokens only — no layout, no selectors beyond :root. */
 :root {
   /* color — from HW3 cheese guide */
   --ink: #3f2b1d;      

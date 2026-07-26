@@ -1,7 +1,3 @@
-/* Shared chrome: header, nav, footer — identical markup and styling on
-   every page. Page-level placement of these regions (e.g. grid areas,
-   flex columns) lives in each page's own layout file, not here. */
-
 @media (prefers-reduced-motion: no-preference) {
   @view-transition {
     navigation: auto;
